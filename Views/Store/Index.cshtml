@@ -1,0 +1,16 @@
+﻿
+
+@model InventoryOrganizingFinalProject.Models.Inventory
+@{
+    ViewBag.Title = "Guitar Brands";
+}
+<h2>Browsing Genre: @Model.getName()</h2>
+<ul>
+    @foreach (var guitar in Model.getName())
+    {
+        <li>
+            @Html.ActionLink(guitar.ToString(), "Details", new { id = guitar.ToString() })
+        </li>
+    }
+</ul>
+
